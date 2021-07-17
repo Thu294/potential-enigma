@@ -84,7 +84,64 @@ const questions = [
     }
 },
 
+// Test Instructions
+{
 
+    type: `input `,
+    name: `testing`,
+    message: `How do you test this project? (this is require)`,
+    validate: testingInput => {
+        if (testingInput) {
+            return true;
+        } else {
+            console.log(`you need to describe how to test this project!`);
+            return false;
+        }
+    }
+},
+
+//License Options 
+
+{
+
+    type: `checkbox`,
+    name: `licensing`,
+    message: `Choose a lincese for your project (this is require)`,
+    choise: [`Apache`, `ISC`, `MIT`, `Mozilla-Public`, `GNU-General-Public`, `Common-Develop`, `none`],
+    validate: licensingInput => {
+        if (licensingInput) {
+            return true;
+        } else {
+            console.log(`You must pick a license for the project!`);
+             return false;
+        }
+    }
+},
+
+//Github Username 
+
+{
+
+    type: `input`,
+    name: `github`,
+    message: `Enter your GitHub Username (this is require)`,
+    validate: githubInput => {
+        if (githubInput) {
+            return true;
+        } else {
+            console.log(`Please enter your Github username!`);
+            return false;
+        }
+    }
+},
+
+//Email address
+ {
+     type: `input`,
+     name: `email`,
+     message: `Would you like to include your email? (this is not require)`,
+     
+ },
 ];
 
 // TODO: Create a function to write README file
