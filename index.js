@@ -57,8 +57,8 @@ function promptUser() {
 // License
 
         {
-            type: "input",
-            name: "License?",
+            type: "checkbox",
+            name: "License",
             choices: [
                 "[MIT License](LICENSE.txt)",
                 "[GNU GPLv3 License](COPYING.txt)",
